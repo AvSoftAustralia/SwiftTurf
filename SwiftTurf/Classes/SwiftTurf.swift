@@ -117,17 +117,17 @@ final public class SwiftTurf {
 //		}
 //	}
 
-//	public static func convex(points: FeatureCollection) -> Polygon? {
-//		
-//		let convexFunction = sharedInstance.conttext.objectForKeyedSubscript("convex")!
-//		let result = convexFunction.callWithArguments([points.geoJSONRepresentation()])
-//		
-//		if let convex = result?.toDictionary() {
-//			return Polygon(dictionary: convex)
-//		} else {
-//			return nil
-//		}
-//	}
+	public static func convex(points: FeatureCollection) -> Polygon? {
+		
+		let convexFunction = sharedInstance.conttext.objectForKeyedSubscript("convex")!
+		let result = convexFunction.callWithArguments([points.geoJSONRepresentation()])
+		
+		if let convex = result?.toDictionary() {
+			return Polygon(dictionary: convex)
+		} else {
+			return nil
+		}
+	}
 
 //	public static func tesselate(feature: GeoJSONConvertible) -> FeatureCollection? {
 //	
